@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  myapp-deploy
+  labels:
+    env: dev
+  annotations:
+    kubernetes.io/change-cause: This is updated version of my app
+spec:
+  replicas: 100
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app:  myapp
+    spec:
+      containers:
+      - name:  myapp-container
+        image:  nginx:alpine
+        

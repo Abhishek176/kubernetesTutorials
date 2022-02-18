@@ -13,6 +13,8 @@ services
     nodePort
     loadbalancer
     ingress
+namespace
+HPA
 logging
 deamonset
 job
