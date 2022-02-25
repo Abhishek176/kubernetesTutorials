@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadbalance-svc
+spec:
+  selector:
+    app: backend
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 80

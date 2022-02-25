@@ -13,6 +13,8 @@ services
     nodePort
     loadbalancer
     ingress
+configmap
+secrets
 namespace
 HPA
 logging
