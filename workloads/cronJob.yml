@@ -1,0 +1,18 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: hello-cronjob
+spec:
+  # successfulJobHistoryLimit: 3
+  # failedJobHistoryLimit: 1
+  suspend: True
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: hello
+            image: busybox
+            args: ['sleep', '20']
+          restartPolicy: OnFailure

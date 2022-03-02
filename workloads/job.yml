@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: myjob
+spec:
+  # parallelism: 2
+  # completions: 5
+  # backoffLimit: 2
+  # activeDeadlineSeconds: 10
+  template:
+    metadata:
+      name: myjob-pod
+      labels:
+        app: myjob
+    spec:
+      containers:
+      - name: myapp
+        image: busybox
+        command: ['sleep', '30']
+      restartPolicy: Never
+        

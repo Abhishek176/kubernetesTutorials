@@ -13,14 +13,19 @@ services
     nodePort
     loadbalancer
     ingress
+job
+cron job
+deamonset
+resource quota
+taints and tolerration
+node selector
+node affinity
+pod affinity/anti affinity
 configmap
 secrets
 namespace
 HPA
 logging
-deamonset
-job
-cron job
 security
 volume
 cluster upgrade
