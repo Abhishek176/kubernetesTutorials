@@ -3,9 +3,10 @@ kind: Pod
 metadata:
   name: myapp
   labels:
-    app: myapp
+    app: app
 spec:
+  nodeSelector:
+    size: large
   containers:
   - name: myapp
     image: nginx
-    

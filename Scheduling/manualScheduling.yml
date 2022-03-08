@@ -3,9 +3,11 @@ kind: Pod
 metadata:
   name: myapp
   labels:
-    app: myapp
+    app: app
 spec:
+  nodeName: pool-6c64w1xxp-uzyls
   containers:
   - name: myapp
     image: nginx
+
     

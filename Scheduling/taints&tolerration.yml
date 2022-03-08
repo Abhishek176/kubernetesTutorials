@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  myapp-deploy
+spec:
+  replicas: 20
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app:  myapp
+    spec:
+      containers:
+      - name:  myapp-container
+        image:  nginx:alpine
+      # # tolerations:
+      # # - key: size
+      # #   operator: Equal
+      # #   value: large
+      # #   effect: NoSchedule
+      # tolerations:
+      # - key: size
+      #   operator: Exists
+      #   effect: NoSchedule/PreferNoSchedule/NoExecute
