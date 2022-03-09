@@ -4,26 +4,26 @@ metadata:
   name: with-pod-affinity
 spec:
   affinity:
-    podAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
-      - labelSelector:
-          matchExpressions:
-          - key: app
-            operator: In
-            values:
-            - myapp
-        topologyKey: topology.kubernetes.io/region
-    # podAntiAffinity:
-    #   preferredDuringSchedulingIgnoredDuringExecution:
-    #   - weight: 100
-    #     podAffinityTerm:
-    #       labelSelector:
-    #         matchExpressions:
-    #         - key: security
-    #           operator: In
-    #           values:
-    #           - S2
-    #       topologyKey: topology.kubernetes.io/zone
+  #   podAffinity:
+  #     requiredDuringSchedulingIgnoredDuringExecution:
+  #     - labelSelector:
+  #         matchExpressions:
+  #         - key: app
+  #           operator: In
+  #           values:
+  #           - frontend
+  #       topologyKey: kubernetes.io/hostname
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
+        podAffinityTerm:
+          labelSelector:
+            matchExpressions:
+            - key: app
+              operator: In
+              values:
+              - frontend
+          topologyKey: kubernetes.io/hostname
   containers:
   - name: with-pod-affinity
     image: nginx

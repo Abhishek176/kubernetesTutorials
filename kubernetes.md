@@ -2,7 +2,6 @@ pod
 how to pass environment variables to pod
 multi container pod
 init container
-
 labels
 replication controller
 replicaset
@@ -17,15 +16,14 @@ job
 cron job
 deamonset
 resource quota
+namespace
+logging & monitoring
 taints and tolerration
 node selector
 node affinity
 pod affinity/anti affinity
 configmap
 secrets
-namespace
-HPA
-logging
 security
 volume
 cluster upgrade

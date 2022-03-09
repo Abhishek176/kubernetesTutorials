@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cm6
+data:
+  variable1: value1
+  variable2: vaule2
+  variable3: value3
+  variable4: value4

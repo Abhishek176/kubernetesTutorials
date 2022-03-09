@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+    app: myapp
+spec:
+  containers:
+  - name: myapp
+    image: nginx
+    volumeMounts:
+    - name: test
+      mountPath: "/config"
+      readOnly: true
+    # envFrom:
+    # - configMapRef:
+    #     name: cm1
+    # env:
+    # - name: DB_HOST
+    #   valueFrom:
+    #     configMapKeyRef:
+    #       name: cm1
+    #       key: DB_HOST
+    # - name: DB_PASS
+    #   valueFrom:
+    #     configMapKeyRef:
+    #       name: cm1
+    #       key: DB_PASS
+    # - name: DB_USER
+    #   valueFrom:
+    #     configMapKeyRef:
+    #       name: cm1
+    #       key: DB_USER
+  # volumes:
+  # - name: test
+  #   configMap:
+  #     name: cm1
+  volumes:
+    - name: test
+      configMap:
+        name: cm1
+        items:
+        - key: DB_HOST
+          path: DB_URL
+        - key: DB_PASS
+          path: DB_PASS
+    
