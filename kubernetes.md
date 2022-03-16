@@ -24,9 +24,8 @@ node affinity
 pod affinity/anti affinity
 configmap
 secrets
-security
 volume
+security
 cluster upgrade
-networking
 Administratation
 troubleshoot
