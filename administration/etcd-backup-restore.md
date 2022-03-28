@@ -124,8 +124,8 @@ etcdctl --write-out=table snapshot status /tmp/snapshot.db
 
 ##### Step 1. Create a user for transferring files from Server 1 to Server 2
 ```sh
-useradd zeal
-passwd zeal
+useradd demo
+passwd demo
 ```
 ##### Step 2. Modify the SSH configuration to allow PasswordAuthentication
 ```sh
@@ -140,7 +140,7 @@ systemctl restart sshd
 ```
 #####  Step 4. Move the snapshot from server 1 to server 2
 ```sh
-scp /tmp/snapshot.db zeal@SERVER2-IP:/tmp
+scp /tmp/snapshot.db demo@SERVER2-IP:/tmp
 ```
 ##### Step 5. Perform the Restore Command
 ```sh

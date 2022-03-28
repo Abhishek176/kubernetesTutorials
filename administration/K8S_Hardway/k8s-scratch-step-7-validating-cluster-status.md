@@ -41,9 +41,9 @@ kubectl get componentstatuses
 ```
 #### Step 4: Verify Kubernetes Objects Creation
 ```sh
-kubectl create namespace kplabs
-kubectl get namespace kplabs -o yaml
-kubectl get serviceaccount --namespace kplabs
-kubectl get secret --namespace kplabs
+kubectl create namespace test
+kubectl get namespace test -o yaml
+kubectl get serviceaccount --namespace test
+kubectl get secret --namespace test
 kubectl create serviceaccount demo
 ```
