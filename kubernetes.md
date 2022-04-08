@@ -3,6 +3,7 @@ how to pass environment variables to pod
 multi container pod
 init container
 labels
+
 replication controller
 replicaset
 deployment
@@ -29,3 +30,5 @@ security
 cluster upgrade
 Administratation
 troubleshoot
+
+kubectl edit command

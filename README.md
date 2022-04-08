@@ -15,9 +15,9 @@ services
     nodePort
     loadbalancer
     ingress
+deamonset
 job
 cron job
-deamonset
 resource quota
 namespace
 logging & monitoring
@@ -29,7 +29,9 @@ configmap
 secrets
 volume
 security
+service account
 cluster upgrade
 Administratation
 troubleshoot
+helm chart
 ```
