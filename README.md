@@ -13,6 +13,8 @@ deployment strategy
 services
     clusterIP
     nodePort
+    multiport
+    headless
     loadbalancer
     ingress
 deamonset
@@ -33,5 +35,4 @@ service account
 cluster upgrade
 Administratation
 troubleshoot
-helm chart
 ```
